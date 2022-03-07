@@ -65,17 +65,7 @@ class ExposureNotificationRiskAssessor {
 
   double assessRisk() {
     _cleanUpGarbarge();
-    return _notificationsById.values.map(assessRiskOf).sum;
-  }
-
-  static double assessRiskOf(ExposureNotification notification) {
-    return 1;
-    // final now = DateTime.now();
-    // final difference = now.difference(notification.timestamp);
-    // // if (difference < 10.minutes) return 1.0;
-    // if (difference > 20.minutes) return 0.0;
-    // final decay = difference.inMilliseconds / 20.minutes.inMilliseconds;
-    // return 1.0 - Curves.easeInOutCubic.transform(decay);
+    return _notificationsById.values.length.toDouble();
   }
 }
 

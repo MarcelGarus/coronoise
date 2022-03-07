@@ -5,7 +5,7 @@ class Co2Input extends Input {
   String get name => 'CO₂';
 
   @override
-  double value = 0;
+  double value = 600;
 
   @override
   double get max => 3000;
